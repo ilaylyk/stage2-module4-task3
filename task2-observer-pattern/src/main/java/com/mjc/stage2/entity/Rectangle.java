@@ -57,6 +57,7 @@ public class Rectangle implements Observable {
 
     @Override
     public void notifyObserver() {
-        observers.forEach(Observer::notify);
+        RectangleEvent event = new RectangleEvent(this);
+        observers.forEach(observer -> observer.handleEvent(event));
     }
 }
