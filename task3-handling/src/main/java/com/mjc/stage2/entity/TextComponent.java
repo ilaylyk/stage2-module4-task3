@@ -13,12 +13,9 @@ public class TextComponent extends AbstractTextComponent {
 
     @Override
     public String operation() {
+        size = componentList.size();
         StringBuilder builder = new StringBuilder();
-        for (AbstractTextComponent component : componentList) {
-            builder
-                    .append(component.operation())
-                    .append(componentType.getDelimiter());
-        }
+        componentList.forEach(component -> builder.append(component.operation()));
         return builder.toString();
     }
 

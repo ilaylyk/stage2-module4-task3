@@ -28,6 +28,4 @@ public class SymbolLeaf extends AbstractTextComponent{
     public int getSize() {
         throw new UnsupportedOperationException();
     }
-
-    // Write your code here!
 }
